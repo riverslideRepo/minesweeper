@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="rgb(3, 61, 95)" />
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="minesweeper.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div id="nav">
+            <div id="title">
+                Minesweeper
+            </div>
+            <div id="settings" onclick="showMenu()"></div>
+        </div>
+        <div id="menu">
+            
+            <div id="middle">
+            </div>
+
+            <div id="bottom">
+
+                <a href="history.html">History</a>
+                <a href="about.html">About</a>
+                
+            </div>
+        </div>
+    </header>
+    <section>
+        <div id="main">
+            <div id="upper">
+                <div id="flag_container">
+                    <div id="flag_logo">
+
+                    </div>
+                    <div id="flag_count">
+                    </div>
+                </div>
+                <div id="timer_container">
+                    <div id="timer_logo">
+                        
+                    </div>
+                    <div id="timer_count">
+                    </div>
+                </div>
+            </div>
+            <div id="middle">
+                <div id="board"></div>
+                <div id="lower" onclick="restart()">
+                    Puddu Wins
+                </div>
+            </div>
+            
+            <div id="lower_fixed">
+                <div onclick="restart()">Restart</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="company">Hazra Brothers</div>
+        <div id="year">2020</div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
