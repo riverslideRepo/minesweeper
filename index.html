@@ -7,7 +7,7 @@
     <title>Minesweeper</title>
     <link rel="stylesheet" href="style.css">
     <script src="minesweeper.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,11 +20,14 @@
         <div id="menu">
             
             <div id="middle">
+                Rows <input type="number" min="5" max="15" style="color:black;" id="setRows">
+                Cols <input type="number" min="5" max="15" style="color:black;" id="setCols">
+                Bomb <input type="number" min="5" max="15" style="color:black;" id="setBombs">
+                
             </div>
 
             <div id="bottom">
 
-                <a href="history.html">History</a>
                 <a href="about.html">About</a>
                 
             </div>
@@ -65,5 +68,4 @@
         <div id="year">2020</div>
     </footer>
 </body>
-<script src="script.js"></script>
 </html>
