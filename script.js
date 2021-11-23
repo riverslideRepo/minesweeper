@@ -147,6 +147,10 @@ function restart(){
     mns.restartGame();
 }
 
+const setRowsField = document.getElementById('setRows');
+const setColsField = document.getElementById('setCols');
+const setBombsField = document.getElementById('setBombs');
+
 window.onload=()=>{
     mns.renderCover(); 
     
@@ -156,4 +160,24 @@ window.onload=()=>{
 
     mns.restartGame();
     //mns.showAllMines();
+
+    setRowsField.value=mns.rows;
+    setColsField.value=mns.cols;
+    setBombsField.value=mns.noOfMines;
+
+
+    setRowsField.addEventListener("change",()=>{
+        mns.rows=parseInt(setRowsField.value);
+        mns.restartGame();
+        setBombsField.setAttribute("max",Math.floor(setRowsField.value * setColsField.value * 2 / 3));
+    });
+    setColsField.addEventListener("change",()=>{
+        mns.cols=parseInt(setColsField.value);
+        mns.restartGame();
+        setBombsField.setAttribute("max",Math.floor(setRowsField.value * setColsField.value * 2 / 3));
+    });
+    setBombsField.addEventListener("change",()=>{
+        mns.noOfMines=parseInt(setBombsField.value);
+        mns.restartGame();
+    });
 }
