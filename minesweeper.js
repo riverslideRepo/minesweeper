@@ -7,10 +7,10 @@ GAMESTATES={
 class MineSweeper{
     constructor(){
         ///min 4 and max 100
-        this.rows=8;
-        this.cols=8;
+        this.rows=10;
+        this.cols=10;
         //min 1 //max (rows*cols-1)
-        this.noOfMines=10;
+        this.noOfMines=15;
 
         this.arr=[];
         this.coverArr=[];
