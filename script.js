@@ -52,7 +52,7 @@ mns.renderCover= ()=>{
 }
 mns.showWin=()=>{
     let lower=document.getElementById("lower");
-    lower.innerHTML="You win in "+mns.timeCount+"s";
+    lower.innerHTML="You won in "+mns.timeCount+"s";
     lower.classList.add("active");
 }
 mns.showLost=()=>{
