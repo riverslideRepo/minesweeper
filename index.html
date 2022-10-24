@@ -8,64 +8,47 @@
     <link rel="stylesheet" href="style.css">
     <script src="minesweeper.js"></script>
     <script src="script.js" defer></script>
+    <script src="../gameboard.js"></script>
 </head>
 <body>
-    <header>
-        <div id="nav">
-            <div id="title">
-                Minesweeper
-            </div>
-            <div id="settings" onclick="showMenu()"></div>
-        </div>
-        <div id="menu">
-            
-            <div id="middle">
-                Rows <input type="number" min="5" max="15" style="color:black;" id="setRows">
-                Cols <input type="number" min="5" max="15" style="color:black;" id="setCols">
-                Bomb <input type="number" min="5" max="15" style="color:black;" id="setBombs">
+    <rs-gameboard title="Minesweeper" id="gameboard">
+        <div slot="menu" id="menu_slot">
+            Rows <input type="number" min="5" max="15" style="color:black;" id="setRows">
+            Cols <input type="number" min="5" max="15" style="color:black;" id="setCols">
+            Bomb <input type="number" min="5" max="15" style="color:black;" id="setBombs">
                 
-            </div>
-
-            <div id="bottom">
-
-                <a href="about.html">About</a>
+        </div>
+        <div slot="mainBoard">
+            <div id="main">
+                <div id="upper">
+                    <div id="flag_container">
+                        <div id="flag_logo">
+    
+                        </div>
+                        <div id="flag_count">
+                        </div>
+                    </div>
+                    <div id="timer_container">
+                        <div id="timer_logo">
+                            
+                        </div>
+                        <div id="timer_count">
+                        </div>
+                    </div>
+                </div>
+                <div id="middle">
+                    <div id="board"></div>
+                    <div id="lower" onclick="restart()">
+                        Puddu Wins
+                    </div>
+                </div>
                 
+                <div id="lower_fixed">
+                    <div onclick="restart()">Restart</div>
+                </div>
             </div>
-        </div>
-    </header>
-    <section>
-        <div id="main">
-            <div id="upper">
-                <div id="flag_container">
-                    <div id="flag_logo">
 
-                    </div>
-                    <div id="flag_count">
-                    </div>
-                </div>
-                <div id="timer_container">
-                    <div id="timer_logo">
-                        
-                    </div>
-                    <div id="timer_count">
-                    </div>
-                </div>
-            </div>
-            <div id="middle">
-                <div id="board"></div>
-                <div id="lower" onclick="restart()">
-                    Puddu Wins
-                </div>
-            </div>
-            
-            <div id="lower_fixed">
-                <div onclick="restart()">Restart</div>
-            </div>
         </div>
-    </section>
-    <footer>
-        <div id="company">Riverslide</div>
-        <div id="year">2022</div>
-    </footer>
+    </rs-gameboard>
 </body>
 </html>
