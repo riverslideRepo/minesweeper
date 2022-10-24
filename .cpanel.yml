@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mfasohyk/games.riverslide.com/minesweeper/
+    - /bin/cp -R * $DEPLOYPATH
