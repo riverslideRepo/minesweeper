@@ -38,7 +38,7 @@ Section
 /*************************************/
 #gameboard #upper{
     display: flex;
-    margin-bottom: 30px;
+    margin:10px 0px;
     width:100%;
     padding: 0 10px 0 10px;
     box-sizing: border-box;
@@ -262,7 +262,7 @@ Section
 }
 /*--------------------*/
 #lower_fixed{
-    margin-top:30px;
+    margin:30px 0px;
 }
 #lower_fixed>div{
     width:70px;
